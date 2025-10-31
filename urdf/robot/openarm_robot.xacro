@@ -39,16 +39,16 @@
             "
             >
 
-    <xacro:include filename="$(find openarm_description)/urdf/arm/openarm_macro.xacro" />
-    <xacro:include filename="$(find openarm_description)/urdf/arm/openarm_arm.xacro" />
-    <xacro:include filename="$(find openarm_description)/urdf/body/openarm_body_macro.xacro" />
-    <xacro:include filename="$(find openarm_description)/urdf/body/openarm_body.xacro" />
-    <xacro:include filename="$(find openarm_description)/urdf/ee/openarm_hand.xacro" />
-    <xacro:include filename="$(find openarm_description)/urdf/ee/openarm_hand_macro.xacro" />
-    <xacro:include filename="$(find openarm_description)/urdf/ros2_control/openarm.ros2_control.xacro" />
-    <xacro:include filename="$(find openarm_description)/urdf/ros2_control/openarm.bimanual.ros2_control.xacro" />
+    <xacro:include filename="/Users/michel_aractingi/code/openarm_description/urdf/arm/openarm_macro.xacro" />
+    <xacro:include filename="/Users/michel_aractingi/code/openarm_description/urdf/arm/openarm_arm.xacro" />
+    <xacro:include filename="/Users/michel_aractingi/code/openarm_description/urdf/body/openarm_body_macro.xacro" />
+    <xacro:include filename="/Users/michel_aractingi/code/openarm_description/urdf/body/openarm_body.xacro" />
+    <xacro:include filename="/Users/michel_aractingi/code/openarm_description/urdf/ee/openarm_hand.xacro" />
+    <xacro:include filename="/Users/michel_aractingi/code/openarm_description/urdf/ee/openarm_hand_macro.xacro" />
+    <xacro:include filename="/Users/michel_aractingi/code/openarm_description/urdf/ros2_control/openarm.ros2_control.xacro" />
+    <xacro:include filename="/Users/michel_aractingi/code/openarm_description/urdf/ros2_control/openarm.bimanual.ros2_control.xacro" />
     <xacro:if value="${ee_type != 'none'}">
-        <xacro:include filename="$(find openarm_description)/urdf/ee/${ee_type}_arguments.xacro" />
+        <xacro:include filename="/Users/michel_aractingi/code/openarm_description/urdf/ee/${ee_type}_arguments.xacro" />
     </xacro:if>
 
     <xacro:property name="arm_prefix_modified" value="${'' if arm_prefix == '' else arm_prefix + '_'}" />
@@ -117,8 +117,8 @@
                 arm_type="${arm_type}"
                 arm_prefix="left_"
                 ee_type="${ee_type}"
-                ee_kinematics_link="${xacro.load_yaml('$(find openarm_description)/config/hand/openarm_hand/kinematics_link.yaml')}"
-                ee_inertials="${xacro.load_yaml('$(find openarm_description)/config/hand/openarm_hand/inertials.yaml')}"
+                ee_kinematics_link="${xacro.load_yaml('/Users/michel_aractingi/code/openarm_description/config/hand/openarm_hand/kinematics_link.yaml')}"
+                ee_inertials="${xacro.load_yaml('/Users/michel_aractingi/code/openarm_description/config/hand/openarm_hand/inertials.yaml')}"
                 rpy_ee="$(arg rpy_ee)"
                 xyz_ee="$(arg xyz_ee)"
                 tcp_xyz="$(arg tcp_xyz)"
@@ -130,8 +130,8 @@
                 arm_type="${arm_type}"
                 arm_prefix="right_"
                 ee_type="${ee_type}"
-                ee_kinematics_link="${xacro.load_yaml('$(find openarm_description)/config/hand/openarm_hand/kinematics_link.yaml')}"
-                ee_inertials="${xacro.load_yaml('$(find openarm_description)/config/hand/openarm_hand/inertials.yaml')}"
+                ee_kinematics_link="${xacro.load_yaml('/Users/michel_aractingi/code/openarm_description/config/hand/openarm_hand/kinematics_link.yaml')}"
+                ee_inertials="${xacro.load_yaml('/Users/michel_aractingi/code/openarm_description/config/hand/openarm_hand/inertials.yaml')}"
                 rpy_ee="$(arg rpy_ee)"
                 xyz_ee="$(arg xyz_ee)"
                 tcp_xyz="$(arg tcp_xyz)"
@@ -181,8 +181,8 @@
             arm_type="${arm_type}"
             arm_prefix="${arm_prefix_modified}"
             ee_type="${ee_type}"
-            ee_kinematics_link="${xacro.load_yaml('$(find openarm_description)/config/hand/openarm_hand/kinematics_link.yaml')}"
-            ee_inertials="${xacro.load_yaml('$(find openarm_description)/config/hand/openarm_hand/inertials.yaml')}"
+            ee_kinematics_link="${xacro.load_yaml('/Users/michel_aractingi/code/openarm_description/config/hand/openarm_hand/kinematics_link.yaml')}"
+            ee_inertials="${xacro.load_yaml('/Users/michel_aractingi/code/openarm_description/config/hand/openarm_hand/inertials.yaml')}"
             rpy_ee="$(arg rpy_ee)"
             xyz_ee="$(arg xyz_ee)"
             tcp_xyz="$(arg tcp_xyz)"
